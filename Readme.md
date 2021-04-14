@@ -66,3 +66,19 @@ The project will be built with:
         <p align="center">
         <img src="./readmeResources/hello-world-success.png" alt="select-apache-tomcat" height="400" >
         </p>
+
+## Adding Bootstrap
+
+Now we add some bootstrap to our project. We copy & paste the html code from _getting started -> starter template_ from [getbootstrap.com]( https://getbootstrap.com ) to our index.jsp file.
+
+<p align="center">
+<img src="./readmeResources/index-jsp-directory.png" alt="index-jsp-directory" height="300" >
+</p>
+
+Now we can see our hello world is much more beautiful now.
+
+## Configuring Project
+
+* Now we configure our hibernate.cfg.xml file and put it in our _src/main/resources_ directory. For now we used our old hibernate project's cfg.xml file and edit it a little.
+* Then we edit our dependency file (pom.xml) accordingly. We copy the dependency code for hibernate and mysql from our old hibernate project (or from google) and paste it.
+* Then we go ***right click on project -> maven -> update project*** to instigate the change in our dependency file (pom.xml). Maven should now download necessary dependencies. We can see the downloaded jar files by maven in _./Maven Dependencies/_ directory in our project.

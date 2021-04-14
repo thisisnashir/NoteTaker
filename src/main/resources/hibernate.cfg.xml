@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+
+		<property name="hibernate.dialect">
+         org.hibernate.dialect.MySQL5Dialect
+      </property>
+
+		<property name="hibernate.connection.driver_class">
+         com.mysql.jdbc.Driver
+      </property>
+
+		<!-- Assume test is the database name -->
+
+		<property name="hibernate.connection.url">
+         jdbc:mysql://localhost:3306/test
+      </property>
+
+		<property name="hibernate.connection.username">
+         root
+      </property>
+
+		<property name="hibernate.connection.password">
+         root123
+      </property>
+
+		<property name="hbm2ddl.auto">
+         create <!-- so the table is created and old table with old columns are dropped -->
+      </property>
+
+		<property name="show_sql">
+         true
+      </property>
+      <property name="format_sql">
+         true
+      </property>
+
+		<!-- <mapping class="com.tut.LifeSucks.Student" />
+		<mapping class="com.tut.LifeSucks.Address" />
+		
+		<mapping class="com.map.Question" />
+		<mapping class="com.map.Answer" />
+		
+		<mapping class="com.map2.Employee" />
+		<mapping class="com.map2.Project" /> -->
+
+	</session-factory>
+</hibernate-configuration>
