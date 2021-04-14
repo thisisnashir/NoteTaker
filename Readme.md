@@ -82,3 +82,12 @@ Now we can see our hello world is much more beautiful now.
 * Now we configure our hibernate.cfg.xml file and put it in our _src/main/resources_ directory. For now we used our old hibernate project's cfg.xml file and edit it a little.
 * Then we edit our dependency file (pom.xml) accordingly. We copy the dependency code for hibernate and mysql from our old hibernate project (or from google) and paste it.
 * Then we go ***right click on project -> maven -> update project*** to instigate the change in our dependency file (pom.xml). Maven should now download necessary dependencies. We can see the downloaded jar files by maven in _./Maven Dependencies/_ directory in our project.
+
+
+## Adding Entities
+
+We start by creating class "Note" in src/main/java folder and keep it in a package "com.entities" for tidiness.
+
+We add necessary properties to it and then edit hibernate.cfg file for mapping the class.
+
+Then we create a class "FacotryProvider" in "com.helper" package (src/main/java directory) for getting a  factory object that maintains single-tone design pattern.
