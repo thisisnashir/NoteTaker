@@ -84,10 +84,27 @@ Now we can see our hello world is much more beautiful now.
 * Then we go ***right click on project -> maven -> update project*** to instigate the change in our dependency file (pom.xml). Maven should now download necessary dependencies. We can see the downloaded jar files by maven in _./Maven Dependencies/_ directory in our project.
 
 
-## Adding Entities
+## Adding Entities and SingleTone
 
 We start by creating class "Note" in src/main/java folder and keep it in a package "com.entities" for tidiness.
 
 We add necessary properties to it and then edit hibernate.cfg file for mapping the class.
 
 Then we create a class "FacotryProvider" in "com.helper" package (src/main/java directory) for getting a  factory object that maintains single-tone design pattern.
+
+
+## Adding Navigation Bar
+
+Now we will try to add a navigation bar in our webpage. First we create **navbar.jsp** file in the same directory as **index.jsp** (_Deployed Resources/WebApp/_) . Then we go to bootstrap webpage (link above) and search navbar and copy a suitable navbar code (we chose the first one)
+
+<p align="center">
+<img src="./readmeResources/navbar.png" alt="navbar"  >
+</p>
+
+Then we copy & paste the code in **navbar.jsp** file. After that, we add the navbar in **index.jsp** file by the following snippet of code.
+
+```html
+<div class="container">
+		<%@include file="navbar.jsp"%>
+</div>
+```
