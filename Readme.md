@@ -118,3 +118,22 @@ We create a folder "css" in the **index.jsp** file directory and create a css fi
 ```
 
 We color the background of the navbar light-blue.
+
+## Add Notes UI
+
+First we take out the java-script and CSS portion out of the **index.jsp** file to another **global_js_css.jsp** file as we do not want to repeat code and want use this portion on multiple page.
+Then we just include the **global_js_css.jsp** file in the **index.jsp** file using `<%@include %>` tag.
+
+Now we create **add_notes.jsp** file and include the **global_js_css.jsp** inside it. Now we update the link to "Add Notes" in our **nabvar.jsp** so that the page is redirected correctly.
+
+Also we fix other links in the navbar to correct page.
+
+How it looks now:
+
+<p align="center">
+<img src="./readmeResources/homepage-now.png" alt="homepage-now" width=700>
+</p>
+
+<p align="center">
+<img src="./readmeResources/add-notes-page-now.png" alt="add-notes-page-now"  width=700>
+</p>
