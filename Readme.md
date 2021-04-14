@@ -119,7 +119,7 @@ We create a folder "css" in the **index.jsp** file directory and create a css fi
 
 We color the background of the navbar light-blue.
 
-## Add Notes UI
+## Add Notes Page
 
 First we take out the java-script and CSS portion out of the **index.jsp** file to another **global_js_css.jsp** file as we do not want to repeat code and want use this portion on multiple page.
 Then we just include the **global_js_css.jsp** file in the **index.jsp** file using `<%@include %>` tag.
@@ -136,4 +136,22 @@ How it looks now:
 
 <p align="center">
 <img src="./readmeResources/add-notes-page-now.png" alt="add-notes-page-now"  width=700>
+</p>
+
+## Add Form in "Add Notes" page
+
+We search form in bootsrap page and copy the form snippet and paste it in **add_notes.jsp**
+
+So now it looks like this:
+
+<p align="center">
+<img src="./readmeResources/add_notes_dummy_form.png" alt="add_notes_dummy_form"  width=700>
+</p>
+
+Now we change the form a bit to look like our add note form and change the form action `SaveNoteServelet` (This will handle the form data) and also update form method to `post`
+
+So now it kind of looks like our desired page.
+
+<p align="center">
+<img src="./readmeResources/add_notes_from_refurbished_a_bit.png" alt="add_notes_from_refurbished_a_bit"  width=700>
 </p>
