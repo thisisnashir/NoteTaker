@@ -108,3 +108,13 @@ Then we copy & paste the code in **navbar.jsp** file. After that, we add the nav
 		<%@include file="navbar.jsp"%>
 </div>
 ```
+
+## Adding CSS
+
+We create a folder "css" in the **index.jsp** file directory and create a css file for our code and include it in our **index.jsp** with the following snippet.
+
+```html
+<link href="css/style.css" rel = "stylesheet"/>
+```
+
+We color the background of the navbar light-blue.
