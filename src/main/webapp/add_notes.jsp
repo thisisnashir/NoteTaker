@@ -23,7 +23,7 @@
 	<!--  Input Form -->
 	<form action="SaveNoteServelet" method="Post">
 		<div class="mb-3">
-			<label for="title" class="form-label">Note Title </label> <input
+			<label for="title" class="form-label">Note Title </label> <input required
 				type="text" class="form-control" id="title"
 				aria-describedby="titleHelp" placeholder="Enter Title...">
 			<div id="titleHelp" class="form-text">Enter a good title</div>
@@ -32,6 +32,7 @@
 			<label for="content" class="form-label">Note Content</label>
 
 			<textarea id="content" 
+			required
 			class="form-control" 
 			style="height:200px" > Defalt Content</textarea>
 			<!-- added bootstrap class "form-control for decency  -->

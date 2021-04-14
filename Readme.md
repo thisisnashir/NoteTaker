@@ -155,3 +155,5 @@ So now it kind of looks like our desired page.
 <p align="center">
 <img src="./readmeResources/add_notes_from_refurbished_a_bit.png" alt="add_notes_from_refurbished_a_bit"  width=700>
 </p>
+
+Now we add `required` keyword in our code so none of the field is empty when submitted.
