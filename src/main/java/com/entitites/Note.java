@@ -3,6 +3,8 @@ package com.entitites;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -10,14 +12,14 @@ import javax.persistence.Table;
 @Table(name = "Notes")
 public class Note {
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY) 
 	private int id;
 	private String title;
 	private String content;
 	private Date addedDate;
 
-	public Note(int id, String title, String content, Date addedDate) {
+	public Note(String title, String content, Date addedDate) {
 		super();
-		this.id = id;
 		this.title = title;
 		this.content = content;
 		this.addedDate = addedDate;

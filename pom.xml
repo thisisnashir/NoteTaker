@@ -25,15 +25,8 @@
 			<artifactId>hibernate-core</artifactId>
 			<version>5.4.5.Final</version>
 		</dependency>
-		
-		<!--  servelet dependency injection -->
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>2.4</version>
-			<scope>provided</scope>
-		</dependency>
 
+		
 
 		<dependency>
 			<groupId>junit</groupId>

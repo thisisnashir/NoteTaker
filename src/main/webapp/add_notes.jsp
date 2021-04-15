@@ -21,17 +21,25 @@
 	<br>
 
 	<!--  Input Form -->
+	
+	
+	
 	<form action="SaveNoteServelet" method="Post">
+	
 		<div class="mb-3">
+		
+		<!-- name field in input will be used for capturing value -->
 			<label for="title" class="form-label">Note Title </label> <input required
-				type="text" class="form-control" id="title"
+			
+				type="text" class="form-control" id="title" name="title" 
 				aria-describedby="titleHelp" placeholder="Enter Title...">
 			<div id="titleHelp" class="form-text">Enter a good title</div>
 		</div>
 		<div class="mb-3">
 			<label for="content" class="form-label">Note Content</label>
-
-			<textarea id="content" 
+		<!-- name field in textarea will be used for capturing value -->
+			<textarea id="content"
+			name="content"
 			required
 			class="form-control" 
 			style="height:200px" > Defalt Content</textarea>

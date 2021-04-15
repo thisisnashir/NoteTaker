@@ -165,4 +165,8 @@ Now we add `required` keyword in our code so none of the field is empty when sub
 
 ## Adding SaveNoteServelet
 
-So we right click on src/main/java and create a servelet named "SaveNoteServelet" in the com.servelets packages. There were some error because the servet-api.jar file is not by default included by eclipse so we edited pom.xml to insert the dependency for servelet and the error was handled.
+So we right click on src/main/java and create a servelet named "SaveNoteServelet" in the "com.servelets" package. There were some error because we were using tomcat 10. It took several hours to figure out that tomcat 9 simply solves the problem. So we downgraded to tomcat 9.
+
+We now edit the `doPost()` method which will capture our form contents(we also add `name` field in our form item to capture the values).
+
+Now we run and see that we can capture the contents from the form.
