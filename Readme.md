@@ -162,3 +162,7 @@ So now it kind of looks like our desired page.
 </p>
 
 Now we add `required` keyword in our code so none of the field is empty when submitted.
+
+## Adding SaveNoteServelet
+
+So we right click on src/main/java and create a servelet named "SaveNoteServelet" in the com.servelets packages. There were some error because the servet-api.jar file is not by default included by eclipse so we edited pom.xml to insert the dependency for servelet and the error was handled.
