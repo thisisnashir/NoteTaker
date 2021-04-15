@@ -1,3 +1,8 @@
+<img src="./readmeResources/icon.png" align="right" />
+
+# Documentation of the Project  [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome#readme)
+> A very simple web based note taker app.
+
 
 <br />
 <p align="center">
