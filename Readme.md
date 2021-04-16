@@ -178,3 +178,11 @@ Session session = FactoryProvider.getFactory().openSession();
 ```
 
 And use this session to start our hibernate part (for details checkout HibernateTests project).
+
+## Adding View All Notes Page
+
+Now we create `all_notes.jsp` file for the page to show all notes and include `global_js_css.jsp` and `navbar.jsp` to get the initial look for our page.
+
+<p align="center">
+<img src="./readmeResources/view_all_notes_basic.png" alt="view_all_notes_basic"  width=700>
+</p>
