@@ -34,13 +34,19 @@
 				for (Note eachnote : list) {
 				%>
 
-				<div class="card mt-3" style="width: 50rem;" >
-					<img src="img/icon.png" style="max-width: 50px;" class="card-img-top" alt="...">
+				<div class="card mt-3" style="width: 85rem;" >
+					<p align="center">
+					<img src="img/icon.png" style="max-width: 100px;" class="card-img-top" alt="...">
+					</p>
 					<div class="card-body">
 						<h5 class="card-title"><%= eachnote.getTitle() %></h5>
 						<p class="card-text"><%= eachnote.getContent() %></p>
+						<div class="contain text-center">
+							
 						<a href="" class="btn btn-danger">Delete</a>
 						<a href="" class="btn btn-primary">Update</a>
+						
+						</div>
 					</div>
 				</div>
 				
