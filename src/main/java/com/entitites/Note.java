@@ -2,6 +2,7 @@ package com.entitites;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,6 +16,7 @@ public class Note {
 	@GeneratedValue(strategy=GenerationType.IDENTITY) 
 	private int id;
 	private String title;
+	@Column(length=1500)
 	private String content;
 	private Date addedDate;
 
