@@ -1,4 +1,4 @@
-package com.servelets;
+package com.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -17,13 +17,13 @@ import com.helper.FactoryProvider;
 /**
  * Servlet implementation class SaveNoteServelet
  */
-public class SaveNoteServelet extends HttpServlet {
+public class SaveNoteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * Default constructor.
 	 */
-	public SaveNoteServelet() {
+	public SaveNoteServlet() {
 		// TODO Auto-generated constructor stub
 	}
 

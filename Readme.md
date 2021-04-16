@@ -229,4 +229,10 @@ We add a bit bootstrap for visual appeal. (we used bootstrap card box template f
 <img src="./readmeResources/view_all_notes_after_cardbox.png" alt="view_all_notes_after_cardbox"  width=700>
 </p>
 
-## Adding Update and Delete Mechanism
+## Adding Delete Mechanism
+
+To add delete mechanism we will add a link to a `DeleteServelet` with the delete button and since we need the id of the note to delete will also pass it to our servelet on a variable `note_id` by editing it like this : `DeleteServelet<note_id=<% note.getId() %>`
+
+Now we create a servelet `DeleteServelet` by right clicking on src/main/java folder and then ***New->Servelet***. We keep the servelet under our **com.servelets** package.
+
+Note that the benefit of creating servelet is that eclipse does the link mapping for us in the `web.xml` file in the **src/main/webapp/WEB-INF** directory by adding the following lines.
