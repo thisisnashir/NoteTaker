@@ -42,7 +42,9 @@
 			name="content"
 			required
 			class="form-control" 
-			style="height:200px" > Defalt Content</textarea>
+			style="height:200px" >You should have known that copy of the "Declaration of Independence" was a fake when you saw it was signed by "Jon Hancrock" instead of "John Hancock." Something that's fake isn't authentic.
+
+A person who falsely claims to be, feel, or do something can be said to be fake. When your friend acts sweet but spreads rumors about you behind your back, you can call her a fake. As a verb, fake means to take an action with the intent to deceive. If you've ever tried to fake a grade on your report card, you know that it's especially hard to change an F to an A. </textarea>
 			<!-- added bootstrap class "form-control for decency  -->
 			<!-- added css height for default height  -->
 		</div>

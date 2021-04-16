@@ -298,3 +298,12 @@ and now we display it by following code.
 <p align="center">
 <img src="./readmeResources/edit_page_toupdate_display.png" alt="edit_page_toupdate_display"  width=700>
 </p>
+
+
+Now lets edit the page to display the message in a form and to be updated. To do that we copy the form portion from add_notes.jsp and edit it a bit.
+
+<p align="center">
+<img src="./readmeResources/update_page_with_raw_form.png" alt="update_page_with_raw_form"  width=500>
+</p>
+
+The update button passes the info to `UpdateServlet` which we need to create now.
