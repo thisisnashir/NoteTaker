@@ -15,6 +15,12 @@
 	<div class="container">
 
 		<%@include file="navbar.jsp"%>
+		
+		<div class="card my-5">
+		<img alt="A note pad" class="img-fluid mx-auto" style="max-width: 400px" src="img/icon.png">
+		<h1 align="center">Start Taking Your Notes</h1>
+		<h3 class="text-center"><a  href="add_notes.jsp">Start Taking Notes</a></h3>
+		</div>
 
 	</div>
 
