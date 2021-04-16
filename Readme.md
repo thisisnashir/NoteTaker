@@ -264,3 +264,6 @@ Then we redirect the user to all_notes.jsp page by follwoing snippet
 ```Java
 response.sendRedirect("all_notes.jsp");
 ```
+## Adding Update Mechanism
+
+To add update mechanism we first need to add an update page that show a form with the previous data.We create a `edit.jsp` file and include necessary jsp files into it and then add link to `edit.jsp` to update button.

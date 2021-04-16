@@ -44,7 +44,7 @@
 						<div class="contain text-center">
 							
 						<a href="DeleteServlet?note_id=<%= eachnote.getId() %>" class="btn btn-danger">Delete</a>
-						<a href="" class="btn btn-primary">Update</a>
+						<a href="edit.jsp" class="btn btn-primary">Update</a>
 						
 						</div>
 					</div>
