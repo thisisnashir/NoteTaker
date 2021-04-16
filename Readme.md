@@ -186,3 +186,38 @@ Now we create `all_notes.jsp` file for the page to show all notes and include `g
 <p align="center">
 <img src="./readmeResources/view_all_notes_basic.png" alt="view_all_notes_basic"  width=700>
 </p>
+
+
+## Show Data on All Notes Page
+Now we need to show all data on the page. We need to do that by incorporating java code into our `all_notes.jsp` page.
+
+To do that we need to import important stuff by the following snippet at the top of `all_notes.jsp`
+
+```Java
+<%@ page import="java.util.List" %>
+<%@ page import="com.helper.FactoryProvider" %>
+<%@ page import="org.hibernate.Session" %>
+<%@ page import="com.entitites.*" %>
+<%@ page import="org.hibernate.Query" %>
+```
+
+and then we write the following snipee to fetch and print data.
+
+```Java
+<%
+		Session s = FactoryProvider.getFactory().openSession();
+		Query query = s.createQuery("From Note");
+		List<Note> list = query.list();
+
+		for (Note eachnote : list) {
+			out.println(eachnote.getId() + " : " + eachnote.getTitle()+" -> "+eachnote.getContent()+"<br>");
+		}
+%>
+```
+**NOTE**: `Session session = FactoryProvider.getFactory().openSession();` gets a repeat variable error. I don't know why the case sensitivity is not working here.
+
+So we can see a raw output in our view all notes page.
+
+<p align="center">
+<img src="./readmeResources/view_all_notes_raw.png" alt="view_all_notes_raw"  width=700>
+</p>
