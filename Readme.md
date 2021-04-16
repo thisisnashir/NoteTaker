@@ -257,7 +257,7 @@ We would have to add it manually otherwise.
 Now we add the functionality of the DeleteServlet. We take the value from the parameter `note_id` and parse it into integer since it is a string. Now we fetch the data with SingleTone SessionFactory and then delete it (since hibernate ORM needs an object to delete the data).
 
 
-**NOTE** : we faced a lot of pain for importing wrong Sesssion (imported java.websocket.Session instead of org.hibernate.Session) 😞
+**NOTE** : we faced a lot of pain for importing wrong Session (imported **java.websocket.Session** instead of **org.hibernate.Session**) 😞
 
 Then we redirect the user to all_notes.jsp page by follwoing snippet
 
@@ -267,3 +267,17 @@ response.sendRedirect("all_notes.jsp");
 ## Adding Update Mechanism
 
 To add update mechanism we first need to add an update page that show a form with the previous data.We create a `edit.jsp` file and include necessary jsp files into it and then add link to `edit.jsp` to update button.
+
+Now we edit the link of the update button so the id of the note to update is also passed to `edit.jsp`
+
+```html
+<a href="edit.jsp?note_id=<%= eachnote.getId() %>" class="btn btn-primary">Update</a>
+```
+And we receive it in the `edit.jsp` page by following snippet:
+```html
+<%
+  int noteId = Integer.parseInt(request.getParameter("note_id").trim());
+%>
+<h1 align="center">Note Id received: <%=noteId %> </h1>
+```
+We needed to import the integer class by adding `<%@ page import="java.lang.Integer"%>` at the top of the `edit.jsp` page.

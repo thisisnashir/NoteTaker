@@ -1,3 +1,5 @@
+<%@ page import="java.lang.Integer"%>
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -15,6 +17,12 @@
 	<div class="container">
 
 		<%@include file="navbar.jsp"%>
+		
+		<%
+		
+		int noteId = Integer.parseInt(request.getParameter("note_id").trim());
+		%>
+		<h1 align="center">Note Id received: <%=noteId %> </h1>
 
 	</div>
 
