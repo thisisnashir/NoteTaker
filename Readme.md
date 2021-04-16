@@ -170,3 +170,11 @@ So we right click on src/main/java and create a servelet named "SaveNoteServelet
 We now edit the `doPost()` method which will capture our form contents(we also add `name` field in our form item to capture the values).
 
 Now we run and see that we can capture the contents from the form.
+
+Finally, we are gonna save the data into database by hibernate and to that we take the SingleTone SessionFactory and call `openSession()` method to get the session.
+
+```Java
+Session session = FactoryProvider.getFactory().openSession();
+```
+
+And use this session to start our hibernate part (for details checkout HibernateTests project).

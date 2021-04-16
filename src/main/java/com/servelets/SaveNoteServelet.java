@@ -1,6 +1,7 @@
 package com.servelets;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Date;
 
 import javax.servlet.ServletException;
@@ -8,7 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.hibernate.Session;
+
 import com.entitites.Note;
+import com.helper.FactoryProvider;
 
 /**
  * Servlet implementation class SaveNoteServelet
@@ -39,13 +43,26 @@ public class SaveNoteServelet extends HttpServlet {
 			// Now we create the note object with the received information
 			Note note = new Note(title, content, new Date());
 
-			System.out.println(note);//See if we are receiving okay
-
+			System.out.println(note);// See if we are receiving okay
+			Session session = FactoryProvider.getFactory().openSession();
+			session.beginTransaction();
+			
+			session.save(note);
+			
+			session.getTransaction().commit();
+			session.close();
+			
+			response.setContentType("text/html");
+			PrintWriter printwriter = response.getWriter();
+			printwriter.println("<h1 style='text-align:center;'>Note is added</h1>");
+			printwriter.println("<h1 style='text-align:center;'><a href='all_notes.jsp'>view all</h1>");
+			
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		// response.getWriter().append("Served at: ").append(request.getContextPath());
 
 	}
 
