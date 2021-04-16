@@ -251,3 +251,16 @@ Note that the benefit of creating servelet is that eclipse does the link mapping
   <url-pattern>/DeleteServlet</url-pattern>
 </servlet-mapping>
 ```
+
+We would have to add it manually otherwise.
+
+Now we add the functionality of the DeleteServlet. We take the value from the parameter `note_id` and parse it into integer since it is a string. Now we fetch the data with SingleTone SessionFactory and then delete it (since hibernate ORM needs an object to delete the data).
+
+
+**NOTE** : we faced a lot of pain for importing wrong Sesssion (imported java.websocket.Session instead of org.hibernate.Session) 😞
+
+Then we redirect the user to all_notes.jsp page by follwoing snippet
+
+```Java
+response.sendRedirect("all_notes.jsp");
+```
