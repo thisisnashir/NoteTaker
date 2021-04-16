@@ -41,6 +41,8 @@
 					<div class="card-body">
 						<h5 class="card-title"><%= eachnote.getTitle() %></h5>
 						<p class="card-text"><%= eachnote.getContent() %></p>
+						
+						<h3>Added at: <%= eachnote.getAddedDate() %></h3>
 						<div class="contain text-center">
 							
 						<a href="DeleteServlet?note_id=<%= eachnote.getId() %>" class="btn btn-danger">Delete</a>
