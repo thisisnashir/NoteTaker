@@ -23,15 +23,39 @@
 		<%@include file="navbar.jsp"%>
 		<h1 style='' align="center">all notes</h1>
 
-		<%
-		Session s = FactoryProvider.getFactory().openSession();
-		Query query = s.createQuery("From Note");
-		List<Note> list = query.list();
+		<div class="row">
+			<div class="col-12">
 
-		for (Note eachnote : list) {
-			out.println(eachnote.getId() + " : " + eachnote.getTitle()+" -> "+eachnote.getContent()+"<br>");
-		}
-		%>
+				<%
+				Session s = FactoryProvider.getFactory().openSession();
+				Query query = s.createQuery("From Note");
+				List<Note> list = query.list();
+
+				for (Note eachnote : list) {
+				%>
+
+				<div class="card mt-3" style="width: 50rem;" >
+					<img src="img/icon.png" style="max-width: 50px;" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title"><%= eachnote.getTitle() %></h5>
+						<p class="card-text"><%= eachnote.getContent() %></p>
+						<a href="" class="btn btn-danger">Delete</a>
+						<a href="" class="btn btn-primary">Update</a>
+					</div>
+				</div>
+				
+
+				<%
+				//out.println(eachnote.getId() + " : " + eachnote.getTitle() + " -> " + eachnote.getContent() + "<br>");
+				}
+				s.close();
+				%>
+
+
+			</div>
+		</div>
+
+
 	</div>
 
 </body>

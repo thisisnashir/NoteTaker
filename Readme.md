@@ -173,7 +173,7 @@ Now we run and see that we can capture the contents from the form.
 
 Finally, we are gonna save the data into database by hibernate and to that we take the SingleTone SessionFactory and call `openSession()` method to get the session.
 
-```Java
+```java
 Session session = FactoryProvider.getFactory().openSession();
 ```
 
@@ -221,3 +221,6 @@ So we can see a raw output in our view all notes page.
 <p align="center">
 <img src="./readmeResources/view_all_notes_raw.png" alt="view_all_notes_raw"  width=700>
 </p>
+
+
+We add a bit bootstrap for visual appeal.
