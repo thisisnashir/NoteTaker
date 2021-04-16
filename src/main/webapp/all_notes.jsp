@@ -34,7 +34,7 @@
 				for (Note eachnote : list) {
 				%>
 
-				<div class="card mt-3" style="width: 85rem;" >
+				<div class="card mt-4 auto" style="width: 85rem;" >
 					<p align="center">
 					<img src="img/icon.png" style="max-width: 100px;" class="card-img-top" alt="...">
 					</p>

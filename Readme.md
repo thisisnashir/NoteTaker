@@ -223,4 +223,10 @@ So we can see a raw output in our view all notes page.
 </p>
 
 
-We add a bit bootstrap for visual appeal.
+We add a bit bootstrap for visual appeal. (we used bootstrap card box template from the page and edited it a bit).
+
+<p align="center">
+<img src="./readmeResources/view_all_notes_after_cardbox.png" alt="view_all_notes_after_cardbox"  width=700>
+</p>
+
+## Adding Update and Delete Mechanism
