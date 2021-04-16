@@ -25,21 +25,17 @@
 		<%
 		
 		int noteId = Integer.parseInt(request.getParameter("note_id").trim());
-		%>
-		<h1 align="center">Note Id received: <%=noteId %> </h1>
-		
-		<%
-			
 		Session s = FactoryProvider.getFactory().openSession();
 		Note note = (Note)s.get(Note.class,noteId);
 		%>
-		<h3 align="center">Note title received: <%=note.getTitle() %> </h3>
-		<p align="center">Note content received: <%=note.getContent() %> </p>
+
 		
 		
 		<form action="UpdateServlet" method="Post">
 	
 		<div class="mb-3">
+		
+		<input value=<%=note.getId() %> name="note_id" type="hidden" >
 		
 		<!-- name field in input will be used for capturing value -->
 			<label for="title" class="form-label">Note title:</label> <input required

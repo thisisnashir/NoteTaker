@@ -307,3 +307,18 @@ Now lets edit the page to display the message in a form and to be updated. To do
 </p>
 
 The update button passes the info to `UpdateServlet` which we need to create now.
+
+## Adding UpdateServlet
+
+We create a servlet named UpdateServlet and it is similar to SaveNoteServelet but instead of saving data it fetches the data b the id and when in persistent state it changes the data with updated information and then the transaction commits the changes to database.
+
+But in order to get the id of the data to fetch/update we first create a hidden input field in our edit.jsp page.
+
+```html
+<input value=<%=note.getId() %> name="note_id" type="hidden" >
+```
+And then receive it at the UpdateServlet by:
+```java
+int id = Integer.parseInt(request.getParameter("name_id").trim());
+```
+and after committing transaction (changes) we redirect to View all notes page by `response.sendRedirect("all_notes.jsp")`
