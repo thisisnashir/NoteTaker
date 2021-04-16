@@ -24,7 +24,7 @@
 	
 	
 	
-	<form action="SaveNoteServelet" method="Post">
+	<form action="SaveNoteServlet" method="Post">
 	
 		<div class="mb-3">
 		

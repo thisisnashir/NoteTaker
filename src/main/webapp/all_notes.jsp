@@ -43,7 +43,7 @@
 						<p class="card-text"><%= eachnote.getContent() %></p>
 						<div class="contain text-center">
 							
-						<a href="DeleteServelet?note_id=<%= eachnote.getId() %>" class="btn btn-danger">Delete</a>
+						<a href="DeleteServlet?note_id=<%= eachnote.getId() %>" class="btn btn-danger">Delete</a>
 						<a href="" class="btn btn-primary">Update</a>
 						
 						</div>

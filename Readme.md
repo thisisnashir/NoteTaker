@@ -236,3 +236,18 @@ To add delete mechanism we will add a link to a `DeleteServelet` with the delete
 Now we create a servelet `DeleteServelet` by right clicking on src/main/java folder and then ***New->Servelet***. We keep the servelet under our **com.servelets** package.
 
 Note that the benefit of creating servelet is that eclipse does the link mapping for us in the `web.xml` file in the **src/main/webapp/WEB-INF** directory by adding the following lines.
+
+```xml
+
+<servlet>
+  <servlet-name>DeleteServlet</servlet-name>
+  <display-name>DeleteServlet</display-name>
+  <description></description>
+  <servlet-class>com.servlets.DeleteServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+  <servlet-name>DeleteServlet</servlet-name>
+  <url-pattern>/DeleteServlet</url-pattern>
+</servlet-mapping>
+```
