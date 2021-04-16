@@ -281,3 +281,20 @@ And we receive it in the `edit.jsp` page by following snippet:
 <h1 align="center">Note Id received: <%=noteId %> </h1>
 ```
 We needed to import the integer class by adding `<%@ page import="java.lang.Integer"%>` at the top of the `edit.jsp` page.
+
+and now we display it by following code.
+
+```html
+<%
+		Session s = FactoryProvider.getFactory().openSession();
+		Note note = (Note)s.get(Note.class,noteId);
+%>
+		<h3 align="center">Note title received: <%=note.getTitle() %> </h3>
+		<p align="center">Note content received: <%=note.getContent() %> </p>
+
+```
+
+
+<p align="center">
+<img src="./readmeResources/edit_page_toupdate_display.png" alt="edit_page_toupdate_display"  width=700>
+</p>
