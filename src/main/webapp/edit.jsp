@@ -41,7 +41,7 @@
 			<label for="title" class="form-label">Note title:</label> <input required
 			
 				type="text" class="form-control" id="title" name="title" 
-				aria-describedby="titleHelp" placeholder="Enter Title..." value=<%=note.getContent() %> >
+				aria-describedby="titleHelp" placeholder="Enter Title..." value=<%=note.getTitle() %> >
 			<div id="titleHelp" class="form-text">Update the title</div>
 		</div>
 		<div class="mb-3">
