@@ -42,7 +42,11 @@ public class DeleteServlet extends HttpServlet {
 			
 			Session session = FactoryProvider.getFactory().openSession();
 			Note note = (Note)session.get(Note.class, noteId);
+			session.beginTransaction();
 			session.delete(note);
+			
+			session.getTransaction().commit();
+
 			session.close();
 			response.sendRedirect("all_notes.jsp");
 
