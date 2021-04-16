@@ -33,7 +33,7 @@
 		
 		<form action="UpdateServlet" method="Post">
 	
-		<div class="mb-3">
+		<div class="form-group">
 		
 		<input value=<%=note.getId() %> name="note_id" type="hidden" >
 		
@@ -41,7 +41,7 @@
 			<label for="title" class="form-label">Note title:</label> <input required
 			
 				type="text" class="form-control" id="title" name="title" 
-				aria-describedby="titleHelp" placeholder="Enter Title..." value=<%=note.getTitle() %> >
+				aria-describedby="titleHelp" placeholder="Enter Title..." value="<%= note.getTitle() %>" />
 			<div id="titleHelp" class="form-text">Update the title</div>
 		</div>
 		<div class="mb-3">
